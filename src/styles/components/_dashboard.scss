@@ -1,0 +1,93 @@
+.dash-name {
+    padding-bottom: 1rem;
+}
+
+.dash-header {
+    background: url('/images/header-back-1.jpg');
+    background-position: center;
+    padding: 5rem 0 0 0;
+    color: $platinum;
+}
+
+.dash-header__top {
+    padding-left: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.dash-header__bottom {
+    padding: 2rem 1.5rem;
+    background: #0000002a;
+
+    p {
+        padding-right: 2rem;
+    }
+}
+
+.dash-header__bottom .task-icon {
+    padding: .5rem .75rem;
+    border: 1px solid white;
+    background: none;
+}
+
+.dash-wrapper {
+    width: 100%;
+    background: $watermelon;
+    overflow: hidden;
+    min-height: 700px;
+    flex-direction: column;
+    position: relative;
+}
+
+.task-wrapper {
+    margin-top: 5rem;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.task {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: lighten($watermelon, 10%);
+    margin-bottom: 2rem;
+    box-shadow: 0px 2px 5px #0000002a;
+    padding: 1rem 1.5rem;
+
+}
+
+.task-icon {
+    padding: 2rem;
+    border-radius: 40px;
+    background: lighten($watermelon, 20%);
+    color: white;
+}
+
+.task-tube {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.task-tube__right {
+    width: 25%;
+}
+
+.footer-tasks {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+    width: 100%;
+    background: lighten($watermelon, 10%);
+    box-shadow: 0px 0px 10px #0000002a;
+}
+
+.footer-content {
+
+    width: 100%;
+    justify-content: space-between;
+
+    .task-icon {
+        padding: 2rem 2.10rem;
+    }
+
+}
+

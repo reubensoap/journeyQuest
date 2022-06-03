@@ -1,0 +1,16 @@
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.button__primary {
+    background: lighten($watermelon, 10%);
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    color: $platinum;
+}
+
+.button__primary:hover {
+    background: lighten($watermelon, 15%);
+}

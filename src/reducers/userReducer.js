@@ -1,6 +1,6 @@
 const defaultPlayerState = {
     firstName: "Alonso",
-    points: 400,
+    points: 0,
     level: 0
 }
 

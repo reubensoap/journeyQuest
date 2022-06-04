@@ -1,0 +1,17 @@
+.progress-bar__wrapper {
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.progress-bar__outer-tube {
+    width: 100%;
+    height: 25px;
+    background: lighten($watermelon, 10%);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.progress-bar__inner-tube {
+    height: 25px;
+    background: lighten($watermelon, 25%);
+}

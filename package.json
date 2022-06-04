@@ -1,5 +1,5 @@
 {
-  "name": "JourneyQuest",
+  "name": "journeyquest",
   "version": "1.0.0",
   "description": "tester",
   "main": "index.html",
@@ -39,5 +39,13 @@
     "validator": "^8.0.0",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reubensoap/journeyQuest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reubensoap/journeyQuest/issues"
+  },
+  "homepage": "https://github.com/reubensoap/journeyQuest#readme"
 }

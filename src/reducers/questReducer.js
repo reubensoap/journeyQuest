@@ -19,6 +19,27 @@ const defaultQuests = [
         questDesc: 'Get to working on the body',
         questLevel: 1,
         category: 'health'
+    },
+    {
+        id: 4,
+        questName: 'Go to Strip Club',
+        questDesc: 'spend some bills',
+        questLevel: 2,
+        category: 'health'
+    },
+    {
+        id: 5,
+        questName: 'Go to Strip Club',
+        questDesc: 'spend some bills',
+        questLevel: 2,
+        category: 'health'
+    },
+    {
+        id: 6,
+        questName: 'Go to Strip Club',
+        questDesc: 'spend some bills',
+        questLevel: 2,
+        category: 'health'
     }
 ];
 

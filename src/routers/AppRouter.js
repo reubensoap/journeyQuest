@@ -8,6 +8,7 @@ import Information from '../components/InformationComponent';
 import Random from '../components/RandomComponent';
 import Task from '../components/TaskComponent';
 import Congrats from '../components/CongratsComponent';
+import LevelUp from '../components/LevelUpComponent';
 
 export const history = createHistory();
 
@@ -21,6 +22,7 @@ const AppRouter = () => (
                 <Route path="/information" component={Information}></Route>
                 <Route path="/random" component={Random}></Route>
                 <Route path="/task/:id" component={Task}></Route>
+                <Route path="/levelUp/:name/:level" component={LevelUp}></Route>
                 <Route path="/congrats/:name/:level" component={Congrats}></Route>
             </Switch>
         </div>

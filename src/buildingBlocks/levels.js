@@ -1,11 +1,12 @@
 export const levels = {
     0: {
         rank: 'New Egg',
-        levelCap: 1000
+        levelCap: 1000,
+        levelStart:0
     },
     1:{
         rank: 'Small Dipper',
-        levelCap: 2500
+        levelCap: 2500,
     },
     2: {
         rank: 'Dreamer',

@@ -7,6 +7,14 @@ import { faPlus, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 class Congrats extends React.Component {
 
+    constructor(props){
+        super(props);
+
+        this.state = {
+            m: this.props.match.params.pastPoints
+        }
+    }
+
 
     move = () => {
 
@@ -14,19 +22,25 @@ class Congrats extends React.Component {
 
         if(this.props.userDetails.level === 0){
             currentWhole = 1000;
+
+            var currentPercentage = (parseInt(this.props.userDetails.pastPoints) / currentWhole)*100;
+
+            var increasePercentage = ((parseInt(this.props.userDetails.pastPoints) + questLevels[this.props.match.params.level].points) / currentWhole)*100;
+
         } else {
             currentWhole = levels[this.props.userDetails.level].levelCap - levels[this.props.userDetails.level - 1].levelCap;
+
+            var currentPercentage = (parseInt(this.props.userDetails.pastPoints - levels[this.props.userDetails.level - 1].levelCap) / currentWhole)*100;
+
+            var increasePercentage = ((parseInt(this.props.userDetails.pastPoints - levels[this.props.userDetails.level - 1].levelCap) + questLevels[this.props.match.params.level].points) / currentWhole)*100;
         }
-
-        var currentPercentage = parseInt((this.props.userDetails.points / currentWhole)*100);
-
-        var increasePercentage = parseInt(((this.props.userDetails.points + questLevels[this.props.match.params.level].points) / currentWhole)*100);
 
         console.log("first", currentPercentage);
         console.log("second", increasePercentage);
 
         var i = 1;
               var elem = document.getElementById("myBar");
+              elem.style.background = 'white';
               var width = currentPercentage; // change this to get the beginning line
               var id = setInterval(frame, 10);
               function frame() {
@@ -46,24 +60,9 @@ class Congrats extends React.Component {
 
     render(){
 
-        var currentLevelCap = levels[this.props.userDetails.level].levelCap;
-
-        var currentWhole = 0;
-
-        if(this.props.userDetails.level === 0){
-            currentWhole = 1000;
-        } else {
-            currentWhole = levels[this.props.userDetails.level].levelCap - levels[this.props.userDetails.level - 1].levelCap;
-        }
-
-        var currentPercentage = parseInt((this.props.userDetails.points / currentWhole)*100);
-
-        var m = currentPercentage + '%';
-
         const custStyle =  {
-            width: m,
+            width: 0,
             height: '30px',
-            background: 'white'
         }
 
 
@@ -82,7 +81,9 @@ class Congrats extends React.Component {
                                 <div className="progress-bar__outer-tube">
                                     <div id="myBar" style={custStyle}></div>
                                 </div>
-                                <button className="button__primary">Finished</button>
+                                <Link to="/dashboard">
+                                    <button className="button__primary">Finished</button>
+                                </Link>
                             </div>
                         </div>
                         <div className="flex-it footer-tasks">

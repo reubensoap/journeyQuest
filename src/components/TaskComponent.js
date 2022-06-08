@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { completeQuest } from '../actions/quests';
+import { completeQuest, addPoints, levelUp } from '../actions/quests';
+import { levels, questLevels } from '../buildingBlocks/levels';
 import { history } from '../routers/AppRouter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faAnglesRight, faCarrot, faChessKnight, faAward, faInfo, faPlus, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -51,7 +52,16 @@ class Task extends React.Component {
             );
         } else if(this.state.step === 2){
             this.props.completeQuest(parseInt(this.props.match.params.id));
-            this.props.history.push(`/congrats/${this.state.questName}/${this.state.level}`);
+            var oldPoints = this.props.userDetails.points;
+            this.props.addPoints(oldPoints, this.props.userDetails.points + questLevels[this.props.quest.questLevel].points);
+
+            if((this.props.userDetails.points + questLevels[this.props.quest.questLevel].points) >= levels[this.props.userDetails.level].levelCap){
+                console.log("leveled UP");
+                this.props.levelUp(this.props.userDetails.level + 1);
+                this.props.history.push(`/levelUp/${this.state.questName}/${this.state.level}`);
+            } else {
+                this.props.history.push(`/congrats/${this.state.questName}/${this.state.level}`);
+            }
         }
     }
 
@@ -90,12 +100,15 @@ const mapStateToProps = (state, props) => {
     }
 
     return {
-        quest: state.quests.find((quest) => quest.id === parseInt(props.match.params.id))
+        quest: state.quests.find((quest) => quest.id === parseInt(props.match.params.id)),
+        userDetails: state.userDetails
     };
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    completeQuest: (id) => dispatch(completeQuest(id)) 
+    completeQuest: (id) => dispatch(completeQuest(id)),
+    addPoints: (data, data2) => dispatch(addPoints(data, data2)),
+    levelUp: (data) => dispatch(levelUp(data))
 });
 
 

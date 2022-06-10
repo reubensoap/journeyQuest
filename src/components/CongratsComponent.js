@@ -72,9 +72,19 @@ class Congrats extends React.Component {
                 <div className="content-container">
                     <div className="flex-it flex-center-align dash-wrapper">
                         <div className="taskData color-light">
-                            <h3>Completed!</h3>
+                            <div className="animation-wrapper">
+                                <div className="blocker"></div>
+                                <div className="blocker2"></div>
+                                <div className="blocker3"></div>
+                                <div className="blocker4"></div>
+                                <div className="animation_content_cover">
+                                    <h3>Completed!</h3>
+                                </div>
+                            </div>
                             <p>{this.props.match.params.name}</p>
-                            <p>{questLevels[parseInt(this.props.match.params.level)].points} pts. granted</p>
+                            <div className="points-wrapper">
+                                <p>{questLevels[parseInt(this.props.match.params.level)].points} pts. granted</p>
+                            </div>
                         </div>
                         <div className="actionSection">
                             <div className="progress-bar__wrapper">

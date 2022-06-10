@@ -1,46 +1,5 @@
 const defaultQuests = [
-    {
-        id: 1,
-        questName: 'Nude Beach',
-        questDesc: 'Go to a nude beach in Florida',
-        questLevel: 2,
-        category: 'adventure'
-    },
-    {
-        id: 2,
-        questName: 'Fly a kite',
-        questDesc: 'purchase a kite and fly it',
-        questLevel: 0,
-        category: 'knowledge'
-    },
-    {
-        id: 3,
-        questName: 'Loose 10 pounds',
-        questDesc: 'Get to working on the body',
-        questLevel: 1,
-        category: 'health'
-    },
-    {
-        id: 4,
-        questName: 'Go to Strip Club',
-        questDesc: 'spend some bills',
-        questLevel: 2,
-        category: 'health'
-    },
-    {
-        id: 5,
-        questName: 'Go to Strip Club',
-        questDesc: 'spend some bills',
-        questLevel: 2,
-        category: 'health'
-    },
-    {
-        id: 6,
-        questName: 'Go to Strip Club',
-        questDesc: 'spend some bills',
-        questLevel: 2,
-        category: 'health'
-    }
+    
 ];
 
 const questReducer = (state = defaultQuests, action) => {

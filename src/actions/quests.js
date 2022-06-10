@@ -13,3 +13,8 @@ export const levelUp = (level) => ({
     type: 'LEVEL_UP',
     level
 });
+
+export const addQuest = (quest) => ({
+    type: 'ADD_QUEST',
+    quest
+});

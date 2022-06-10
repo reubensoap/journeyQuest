@@ -2,11 +2,32 @@ button {
     border: none;
     background: none;
     cursor: pointer;
+    padding: 0;
+}
+
+.button__submit {
+    @extend .button__primary;
+    width: 100%;
+
+}
+
+.button__submit__wrapper {
+    padding: 2rem 0;
+}
+
+.no-link {
+    color: white;
+    border: none;
+    padding: 1rem;
+    line-height: 1;
+    font-weight: 300;
+    font-size: 1rem;
+    text-underline-position: unset;
 }
 
 .button__primary {
     background: lighten($watermelon, 10%);
-    padding: 2rem 5rem;
+    padding: 1.5rem 3rem;
     border-radius: 10px;
     color: $platinum;
 }

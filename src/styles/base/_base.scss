@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 14px;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     padding: 0;
     margin: 0;
     color: $watermelon;
@@ -19,24 +19,40 @@ h1 {
 }
 
 h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     padding: 0;
     margin: 0;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0;
     margin: 0;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding: 0;
     margin: 0;
     font-family: 'M PLUS Rounded', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }
 
 .color-light {
@@ -50,6 +66,7 @@ p {
 .content-container {
     max-width: 900px;
     margin: auto;
+    position: relative;
 }
 
 .flex-it {
@@ -91,4 +108,12 @@ p {
 
 .padding-bottom-2 {
     padding-bottom: 2rem;
+}
+
+.margin-bottom-2 {
+    margin-bottom: 2rem;
+}
+
+.widthHundred {
+    width: 100%;
 }

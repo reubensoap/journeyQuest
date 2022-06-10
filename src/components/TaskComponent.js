@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import { completeQuest, addPoints, levelUp } from '../actions/quests';
 import { levels, questLevels } from '../buildingBlocks/levels';
 import { history } from '../routers/AppRouter';
+import Footer from './FooterComponent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faAnglesRight, faCarrot, faChessKnight, faAward, faInfo, faPlus, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
 class Task extends React.Component {
 
@@ -51,7 +52,7 @@ class Task extends React.Component {
                 </div>
             );
         } else if(this.state.step === 2){
-            this.props.completeQuest(parseInt(this.props.match.params.id));
+            this.props.completeQuest(this.props.match.params.id);
             var oldPoints = this.props.userDetails.points;
             this.props.addPoints(oldPoints, this.props.userDetails.points + questLevels[this.props.quest.questLevel].points);
 
@@ -75,18 +76,8 @@ class Task extends React.Component {
                         <p>{this.props.quest.questDesc}</p>
                     </div>
                     {this.renderActionSection()}
-                    <div className="flex-it footer-tasks">
-                        <div className="flex-it footer-content">
-                            <Link to="/dashboard">
-                                <div className="flex-it flex-center task-icon">
-                                    <FontAwesomeIcon icon={faArrowLeft} size="2x" />
-                                </div>
-                            </Link>
-                            <div className="flex-it flex-center task-icon">
-                                <FontAwesomeIcon icon={faPlus} size="2x"/>
-                            </div>
-                        </div>
-                    </div>
+                    <Footer option1="dashboard" option2="addition" image1={faArrowLeft} image2={faPlus}/>
+                    
                 </div>
             </div>
         );
@@ -95,12 +86,12 @@ class Task extends React.Component {
 
 const mapStateToProps = (state, props) => {
 
-    if(state.quests.find((quest) => quest.id === parseInt(props.match.params.id)) === undefined){
+    if(state.quests.find((quest) => quest.id === props.match.params.id) === undefined){
         history.push("/dashboard");
     }
 
     return {
-        quest: state.quests.find((quest) => quest.id === parseInt(props.match.params.id)),
+        quest: state.quests.find((quest) => quest.id === props.match.params.id),
         userDetails: state.userDetails
     };
 };

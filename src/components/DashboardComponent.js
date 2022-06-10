@@ -5,6 +5,7 @@ import TaskListComponent from './TaskListComponent';
 import { levels } from '../buildingBlocks/levels';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { completeQuest } from '../actions/quests';
+import Footer from './FooterComponent';
 import { faCoffee, faAnglesRight, faCarrot, faChessKnight, faAward, faInfo, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 class Dashboard extends React.Component {
@@ -13,10 +14,6 @@ class Dashboard extends React.Component {
         super(props);
 
 
-    }
-
-    renderNextLevel = () => {
-        return
     }
 
     render(){
@@ -34,7 +31,7 @@ class Dashboard extends React.Component {
                             <p>{levels[this.props.userDetails.level].rank}</p>
                         </div>
                         <div className="right">
-                            <Link to="/information">
+                            <Link to="/facts">
                                 <div className="flex-it flex-center task-icon">
                                     <FontAwesomeIcon icon={faInfo} size="1x"/>
                                 </div>
@@ -43,19 +40,8 @@ class Dashboard extends React.Component {
                     </div>
                 </div>
                 <div className="flex-it dash-wrapper">
-
-
                     <TaskListComponent />
-
-
-                    
-                    <div className="flex-it footer-tasks">
-                        <div className="footer-content">
-                            <div className="flex-it flex-center task-icon">
-                                <FontAwesomeIcon icon={faPlus} size="2x"/>
-                            </div>
-                        </div>
-                    </div>
+                    <Footer option1="settings" option2="addition" image1={faInfo} image2={faPlus}/>
                 </div>
             </div>
         );

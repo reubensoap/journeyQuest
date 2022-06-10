@@ -15,3 +15,131 @@
     height: 25px;
     background: lighten($watermelon, 25%);
 }
+
+
+
+// ******************************************* //
+//           animation section                 //
+// ******************************************* //
+
+.animation-wrapper {
+    min-width: 300px;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation_content_cover {
+    background: $watermelon;
+    z-index: 10;
+    
+    h3{
+        padding: 0;
+    }
+
+}
+
+.blocker {
+    background: lighten($watermelon, 20%);
+    position: absolute;
+    top: 40px;
+    left: 120px;
+    width: 20px;
+    height: 20px;
+    animation: move-box 2s ease-out forwards;
+    
+}
+
+.blocker2 {
+    background: lighten($watermelon, 20%);
+    position: absolute;
+    right: 120px;
+    top: 40px;
+    width: 20px;
+    height: 20px;
+    animation: move-box-2 2s ease-out forwards; 
+}
+
+.blocker3 {
+    background: lighten($watermelon, 30%);
+    position: absolute;
+    right: 120px;
+    top: 48px;
+    width: 8px;
+    height: 8px;
+    animation: move-box-3 1.5s ease-out forwards; 
+}
+
+.blocker4 {
+    background: lighten($watermelon, 30%);
+    position: absolute;
+    left: 120px;
+    top: 48px;
+    width: 8px;
+    height: 8px;
+    animation: move-box-4 1.5s ease-out forwards; 
+}
+
+.points-wrapper {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: lighten($watermelon, 15%);
+    border-radius: 10px;
+    border: 2px solid $watermelon;
+    color: $watermelon;
+    animation: points 2s forwards;
+}
+
+@keyframes move-box {
+    100% {
+        transform: translateX(-115px) rotate(2turn);
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 1;
+    }
+}
+
+@keyframes move-box-2 {
+    100% {
+        transform: translateX(115px) rotate(-2turn);
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 1;
+    }
+}
+
+@keyframes move-box-3 {
+    100% {
+        transform: translateX(115px) rotate(-3turn);
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 1;
+    }
+}
+
+@keyframes move-box-4 {
+    100% {
+        transform: translateX(-115px) rotate(-3turn);
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 1;
+    }
+}
+
+@keyframes points {
+    100%{
+        background: $watermelon;
+        border: 2px solid lighten($watermelon, 15%);
+        color: white;
+    }    
+}

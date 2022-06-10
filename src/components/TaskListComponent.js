@@ -6,8 +6,8 @@ const TaskList = (props) => (
     <div className="task-wrapper ">
         {
             props.quests.length === 0 ? (
-                <div>
-                    NO Data
+                <div className="nothing__wrapper color-light">
+                    <h3>Looks empty, use + button to start</h3>
                 </div>
             ) : (
                 props.quests.map((quest, index) => {

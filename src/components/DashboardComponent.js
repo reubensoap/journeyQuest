@@ -6,6 +6,7 @@ import { levels } from '../buildingBlocks/levels';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { completeQuest } from '../actions/quests';
 import Footer from './FooterComponent';
+import { headerStatements } from '../buildingBlocks/statements';
 import { faCoffee, faAnglesRight, faCarrot, faChessKnight, faAward, faInfo, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 class Dashboard extends React.Component {
@@ -22,7 +23,7 @@ class Dashboard extends React.Component {
                 <div className="dash-header">
                     <div className="dash-header__top">
                         <h2 className="dash-name">Welcome, {this.props.userDetails.firstName}</h2>
-                        <p>Something about your life</p>
+                        <p>{headerStatements[Math.floor(Math.random() * 20)+1].statement}</p>
                     </div>
                     <div className="flex-it flex-just-space dash-header__bottom">
                         <div className="flex-it flex-center left">

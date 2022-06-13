@@ -1,6 +1,12 @@
 const defaultQuests = [
-    
-];
+    {
+        questName: "Eat a dog",
+        questDesc: "Not your own",
+        questLevel: 2,
+        category: "adventure",
+        id: "fff"
+    }
+]
 
 const questReducer = (state = defaultQuests, action) => {
     switch(action.type){

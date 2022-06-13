@@ -21,14 +21,14 @@ export const levels = {
 export const questLevels = {
     0: {
         name: 'Mini Quest',
-        points: 100
+        points: 200
     }, 
     1: {
         name: 'Expanded Quest',
-        points: 200
+        points: 400
     },
     2: {
         name: 'Unicorn Quest',
-        points: 600
+        points: 1000
     }
 }

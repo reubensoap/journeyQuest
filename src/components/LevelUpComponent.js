@@ -20,13 +20,28 @@ class LevelUp extends React.Component {
             <div>
                 <div className="content-container">
                     <div className="flex-it flex-center-align dash-wrapper">
-                        <div className="taskData color-light">
-                            <h3>+ Level Up</h3>
-                            <p>{levels[this.props.userDetails.level - 1].rank}</p>
-                            <p>V V V</p>
-                            <p>{levels[this.props.userDetails.level].rank}</p>
+                        <div className="taskData__Level color-light">
+                            <h2>Level Up</h2>
+                            <div className="levelUpWrapper">
+                                <h2 className="first">{levels[this.props.userDetails.level - 1].rank}</h2>
+                                <h2 className="second">{levels[this.props.userDetails.level].rank}</h2>
+                            </div>
                         </div>
                         <div className="actionSection">
+                            <div className="newStuff__wrapper">
+                                <h3>Plates</h3>
+                                <div className="newStuff__plate__wrapper">
+                                    <div className="newPlate">
+                                        
+                                    </div>
+                                </div>
+                                <h3>Menu Color</h3>
+                                <div className="newStuff__color__wrapper">
+                                    <div className="newColor">
+                                        
+                                    </div>
+                                </div>
+                            </div>
                             <Link to={`/congrats/${this.props.match.params.name}/${this.props.match.params.level}`}>
                                 <button className="button__primary">Continue</button>
                             </Link>

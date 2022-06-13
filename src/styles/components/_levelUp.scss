@@ -1,0 +1,107 @@
+.taskData__Level {
+    @extend .taskData;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+}
+
+.actionSection__Level {
+    @extend .actionSection;
+
+    margin-bottom: 10rem;
+    padding: 0 1.5rem 3rem 1.5rem;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+}
+
+.levelUpWrapper {
+    margin-top: 2rem;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .first {
+        position: absolute;
+        top: 0;
+        animation: firstLevel 1.5s ease-out forwards;
+    }
+
+    .second {
+        position: absolute;
+        top: 60px;
+        opacity: 0;
+        animation: secondLevel 2s ease-out forwards;
+    }
+
+}
+
+.newStuff__wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 4rem;
+
+    h3 {
+        padding: 1rem 0rem;
+    }
+
+}
+
+.newStuff__plate__wrapper {
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    background: lighten($watermelon, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: newFade 4s ease-out forwards;
+}
+
+.newPlate {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background: white;
+}
+
+.newStuff__color__wrapper {
+    @extend .newStuff__plate__wrapper;
+}
+
+.newColor {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background: white;
+}
+
+
+
+@keyframes firstLevel {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes secondLevel {
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes newFade {
+    100%{
+        background: $watermelon;
+    }
+
+    15%{
+        background: lighten($watermelon, 20%);
+    }
+}

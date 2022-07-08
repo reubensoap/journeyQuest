@@ -56,7 +56,7 @@
     width: 200px;
     height: 70px;
     border-radius: 10px;
-    background: lighten($watermelon, 10%);
+    background: rgba(255, 255, 255, 0.527);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,10 +98,10 @@
 
 @keyframes newFade {
     100%{
-        background: $watermelon;
+        background: rgba(255, 255, 255, 0);
     }
 
     15%{
-        background: lighten($watermelon, 20%);
+        background: rgba(255, 255, 255, 0.836);
     }
 }

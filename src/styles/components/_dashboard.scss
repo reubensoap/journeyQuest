@@ -3,23 +3,34 @@
 }
 
 .dash-header {
-    background: url('/images/header-back-1.jpg');
     background-position: center;
+    background-size: cover;
     padding: 5rem 0 0 0;
     color: $platinum;
+
 }
 
 .dash-header__top {
     padding-left: 1.5rem;
     padding-bottom: 3rem;
+
+    h2 {
+        text-shadow: 0px 0px 10px #000000;
+    }
+
+    p{
+        text-shadow: 0px 0px 10px #000000;
+    }
+
 }
 
 .dash-header__bottom {
     padding: 2rem 1.5rem;
-    background: #0000002a;
+    background: #00000048;
 
     p {
         padding-right: 2rem;
+        text-shadow: 0px 0px 10px #000000;
     }
 }
 
@@ -31,7 +42,6 @@
 
 .dash-wrapper {
     width: 100%;
-    background: $watermelon;
     overflow: hidden;
     min-height: 700px;
     flex-direction: column;
@@ -49,7 +59,7 @@
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    background: lighten($watermelon, 10%);
+    //background: lighten($watermelon, 10%);
     margin-bottom: 2rem;
     box-shadow: 0px 2px 5px #0000002a;
     padding: 1rem 1.5rem;
@@ -59,7 +69,7 @@
 .task-icon {
     padding: 1.25rem;
     border-radius: 40px;
-    background: lighten($watermelon, 20%);
+    //background: lighten($watermelon, 20%);
     color: white;
 }
 
@@ -72,9 +82,8 @@
     width: 25%;
 }
 
-.nothing__wrapper {
+#nothing__wrapper {
     text-align: center;
-    background: darken($watermelon, 5%);
     width: 100%;
     border-radius: 10px;
     padding: 2rem 1rem;

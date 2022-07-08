@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Footer = (props) => (
-    <div className="flex-it footer-tasks">
+    <div id="footer" className="flex-it footer-tasks">
         <div className="flex-it footer-content">
             <Link to={`/${props.option1}`}>
                 <div className="flex-it flex-center task-icon">

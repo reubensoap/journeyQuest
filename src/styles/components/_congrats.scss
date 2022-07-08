@@ -3,17 +3,17 @@
     padding: 1rem 2rem;
 }
 
-.progress-bar__outer-tube {
+#progress-bar__outer-tube {
     width: 100%;
     height: 25px;
-    background: lighten($watermelon, 10%);
+    //background: lighten($watermelon, 10%);
     overflow: hidden;
     margin-bottom: 2rem;
 }
 
 .progress-bar__inner-tube {
     height: 25px;
-    background: lighten($watermelon, 25%);
+    background: white;
 }
 
 
@@ -31,8 +31,7 @@
     align-items: center;
 }
 
-.animation_content_cover {
-    background: $watermelon;
+#animation_content_cover {
     z-index: 10;
     
     h3{
@@ -41,8 +40,7 @@
 
 }
 
-.blocker {
-    background: lighten($watermelon, 20%);
+#blocker {
     position: absolute;
     top: 40px;
     left: 120px;
@@ -52,8 +50,7 @@
     
 }
 
-.blocker2 {
-    background: lighten($watermelon, 20%);
+#blocker2 {
     position: absolute;
     right: 120px;
     top: 40px;
@@ -62,8 +59,7 @@
     animation: move-box-2 2s ease-out forwards; 
 }
 
-.blocker3 {
-    background: lighten($watermelon, 30%);
+#blocker3 {
     position: absolute;
     right: 120px;
     top: 48px;
@@ -72,8 +68,7 @@
     animation: move-box-3 1.5s ease-out forwards; 
 }
 
-.blocker4 {
-    background: lighten($watermelon, 30%);
+#blocker4 {
     position: absolute;
     left: 120px;
     top: 48px;
@@ -85,9 +80,9 @@
 .points-wrapper {
     margin-top: 1rem;
     padding: 1.5rem;
-    background: lighten($watermelon, 15%);
+    background: rgba(255, 255, 255, 0.514);
     border-radius: 10px;
-    border: 2px solid $watermelon;
+    border: 2px solid white;
     color: $watermelon;
     animation: points 2s forwards;
 }
@@ -138,8 +133,8 @@
 
 @keyframes points {
     100%{
-        background: $watermelon;
-        border: 2px solid lighten($watermelon, 15%);
+        background: rgba(255, 255, 255, 0);
+        border: 2px solid white;
         color: white;
     }    
 }

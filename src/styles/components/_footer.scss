@@ -3,8 +3,16 @@
     bottom: 0;
     padding: 1.5rem;
     width: 100%;
-    background: lighten($watermelon, 10%);
+    //background: lighten($watermelon, 10%);
     box-shadow: 0px 0px 10px #0000002a;
+}
+
+.footer-color-1 {
+    background: lighten($watermelon, 10%);
+}
+
+.footer-color-2 {
+    background: lighten($american-pink, 10%);
 }
 
 .footer-content {

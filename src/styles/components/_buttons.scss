@@ -1,8 +1,14 @@
-button {
+.button {
     border: none;
-    background: none;
     cursor: pointer;
     padding: 0;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background: none;
 }
 
 .button__submit {
@@ -26,12 +32,7 @@ button {
 }
 
 .button__primary {
-    background: lighten($watermelon, 10%);
     padding: 1.5rem 3rem;
     border-radius: 10px;
     color: $platinum;
-}
-
-.button__primary:hover {
-    background: lighten($watermelon, 15%);
 }

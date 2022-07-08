@@ -17,23 +17,36 @@ const renderPics = (category) => {
     }
 }
 
-export const QuestItem = ({id, questDesc, questName, questLevel, category}) => (
-        <Link to={`/task/${id}`} className="no-link">
-            <div className="task">
-                <div className=" flex-it flex-center-align content-section">
-                    <div className="flex-it flex-center task-icon">
-                        {renderPics(category)}
-                    </div>
-                    <div className="flex-it flex-center-align flex-just-space color-light task-tube">
-                        <p>{questName}</p>
-                        <div className="flex-it flex-center-align flex-just-space task-tube__right">
-                            <p>{questLevels[questLevel].points} points</p>
-                            <FontAwesomeIcon icon={faAnglesRight} size="1x"/>
+class QuestItem extends React.Component {
+
+    constructor(props){
+        super(props);
+    }
+
+    componentDidMount(){
+    }
+
+        render(){
+            return(
+                <Link to={`/task/${this.props.id}`} className="no-link">
+                    <div className="task">
+                        <div className=" flex-it flex-center-align content-section">
+                            <div className="flex-it flex-center task-icon">
+                                {renderPics(this.props.category)}
+                            </div>
+                            <div className="flex-it flex-center-align flex-just-space color-light task-tube">
+                                <p>{this.props.questName}</p>
+                                <div className="flex-it flex-center-align flex-just-space task-tube__right">
+                                    <p>{questLevels[this.props.questLevel].points} points</p>
+                                    <FontAwesomeIcon icon={faAnglesRight} size="1x"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </Link>
-);
+                </Link>
+            )
+        }
+        
+};
 
 export default connect()(QuestItem);

@@ -56,6 +56,140 @@ class Congrats extends React.Component {
 
     componentDidMount(){
         this.move();
+
+
+
+        const menuColor = localStorage.getItem("menuColor");
+
+        if(menuColor === 'undefined' || menuColor === "1"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-1');
+            document.getElementById("footer").classList.add('accent-color-1');
+            document.getElementById("animation_content_cover").classList.add('base-color-1');
+            document.getElementById("progress-bar__outer-tube").classList.add('accent-color-1');
+
+            document.getElementById("blocker").classList.add('accent-color-1-brighter');
+            document.getElementById("blocker2").classList.add('accent-color-1-brighter');
+            document.getElementById("blocker3").classList.add('accent-color-1-brightest');
+            document.getElementById("blocker4").classList.add('accent-color-1-brightest');
+
+            const taskIcons = document.querySelectorAll('.task-icon');
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-1-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button');
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-1');
+            }
+
+         } else if (menuColor === "2"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-2');
+            document.getElementById("footer").classList.add('accent-color-2');
+            document.getElementById("animation_content_cover").classList.add('base-color-2');
+            document.getElementById("progress-bar__outer-tube").classList.add('accent-color-2');
+
+            document.getElementById("blocker").classList.add('accent-color-2-brighter');
+            document.getElementById("blocker2").classList.add('accent-color-2-brighter');
+            document.getElementById("blocker3").classList.add('accent-color-2-brightest');
+            document.getElementById("blocker4").classList.add('accent-color-2-brightest');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-2-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-2');
+            }
+
+         } else if (menuColor === "3"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-3');
+            document.getElementById("footer").classList.add('accent-color-3');
+            document.getElementById("animation_content_cover").classList.add('base-color-3');
+            document.getElementById("progress-bar__outer-tube").classList.add('accent-color-3');
+
+            document.getElementById("blocker").classList.add('accent-color-3-brighter');
+            document.getElementById("blocker2").classList.add('accent-color-3-brighter');
+            document.getElementById("blocker3").classList.add('accent-color-3-brightest');
+            document.getElementById("blocker4").classList.add('accent-color-3-brightest');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-3-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-3');
+            }
+
+         } else if (menuColor === "4"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-4');
+            document.getElementById("footer").classList.add('accent-color-4');
+            document.getElementById("animation_content_cover").classList.add('base-color-4');
+            document.getElementById("progress-bar__outer-tube").classList.add('accent-color-4');
+
+            document.getElementById("blocker").classList.add('accent-color-4-brighter');
+            document.getElementById("blocker2").classList.add('accent-color-4-brighter');
+            document.getElementById("blocker3").classList.add('accent-color-4-brightest');
+            document.getElementById("blocker4").classList.add('accent-color-4-brightest');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-4-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-4');
+            }
+
+         } else if (menuColor === "5"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-5');
+            document.getElementById("footer").classList.add('accent-color-5');
+            document.getElementById("animation_content_cover").classList.add('base-color-5');
+            document.getElementById("progress-bar__outer-tube").classList.add('accent-color-5');
+
+            document.getElementById("blocker").classList.add('accent-color-5-brighter');
+            document.getElementById("blocker2").classList.add('accent-color-5-brighter');
+            document.getElementById("blocker3").classList.add('accent-color-5-brightest');
+            document.getElementById("blocker4").classList.add('accent-color-5-brightest');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-5-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-5');
+            }
+
+         } else if (menuColor === "6"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-6');
+            document.getElementById("footer").classList.add('accent-color-6');
+            document.getElementById("animation_content_cover").classList.add('base-color-6');
+            document.getElementById("progress-bar__outer-tube").classList.add('accent-color-6');
+
+            document.getElementById("blocker").classList.add('accent-color-6-brighter');
+            document.getElementById("blocker2").classList.add('accent-color-6-brighter');
+            document.getElementById("blocker3").classList.add('accent-color-6-brightest');
+            document.getElementById("blocker4").classList.add('accent-color-6-brightest');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-6-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-6');
+            }
+
+         }
+
+
     }
 
     render(){
@@ -70,14 +204,14 @@ class Congrats extends React.Component {
 
             <div>
                 <div className="content-container">
-                    <div className="flex-it flex-center-align dash-wrapper">
+                    <div id="dash-wrapper-1" className="flex-it flex-center-align dash-wrapper">
                         <div className="taskData color-light">
                             <div className="animation-wrapper">
-                                <div className="blocker"></div>
-                                <div className="blocker2"></div>
-                                <div className="blocker3"></div>
-                                <div className="blocker4"></div>
-                                <div className="animation_content_cover">
+                                <div id="blocker"></div>
+                                <div id="blocker2"></div>
+                                <div id="blocker3"></div>
+                                <div id="blocker4"></div>
+                                <div id="animation_content_cover">
                                     <h3>Completed!</h3>
                                 </div>
                             </div>
@@ -88,15 +222,15 @@ class Congrats extends React.Component {
                         </div>
                         <div className="actionSection">
                             <div className="progress-bar__wrapper">
-                                <div className="progress-bar__outer-tube">
+                                <div id="progress-bar__outer-tube">
                                     <div id="myBar" style={custStyle}></div>
                                 </div>
                                 <Link to="/dashboard">
-                                    <button className="button__primary">Finished</button>
+                                    <button className="button button__primary">Finished</button>
                                 </Link>
                             </div>
                         </div>
-                        <div className="flex-it footer-tasks">
+                        <div id="footer" className="flex-it footer-tasks">
                             <div className="flex-it footer-content">
                                 <Link to="/dashboard">
                                     <div className="flex-it flex-center task-icon">

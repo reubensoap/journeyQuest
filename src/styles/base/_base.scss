@@ -2,12 +2,32 @@
     box-sizing: border-box;
 }
 
+:root,
+:root.watermelon {
+    --bg-color: #eb6383;
+}
+:root.violet-blue {
+    --bg-color: #7079cf;
+}
+:root.old-car-yellow {
+    --bg-color: #7079cf;
+}
+:root.rain {
+    --bg-color: #7079cf;
+}
+:root.grass {
+    --bg-color: #7079cf;
+}
+:root.gun-metal {
+    --bg-color: #7079cf;
+}
+
 html {
     font-size: 14px;
 }
 
 body {
-    background: $cyber-grape;
+    background: #563f70;
 }
 
 h1 {
@@ -116,4 +136,221 @@ a:active {
 
 .widthHundred {
     width: 100%;
+}
+
+.no-show {
+    display: none;
+}
+
+// #############################################################################
+// ################  profile Plates ############################################
+// #############################################################################
+
+.background-level-1 {
+    background: url('/images/header-back-1.jpg');
+}
+
+.background-level-2 {
+    background: url('/images/header-back-2.jpg');
+}
+
+.background-level-3 {
+    background: url('/images/header-back-3.jpg');
+}
+
+.background-level-4 {
+    background: url('/images/header-back-4.jpg');
+}
+
+.background-level-5 {
+    background: url('/images/header-back-5.jpg');
+}
+
+.background-level-6 {
+    background: url('/images/header-back-6.jpg');
+}
+
+
+// #############################################################################
+// ################  profile colors ############################################
+// #############################################################################
+
+.base-color-1 {
+    background: $watermelon;
+}
+
+.accent-color-1 {
+    background: lighten($watermelon, 10%);
+}
+
+.accent-color-1-brighter {
+    background: lighten($watermelon, 15%);
+}
+
+.accent-color-1-brightest {
+    background: lighten($watermelon, 20%);
+}
+
+.button-color-1 {
+    @extend .accent-color-1;
+}
+
+.button-color-1:hover {
+    @extend .accent-color-1-brighter;
+}
+
+// #############################################################################
+
+.base-color-2 {
+    background: $american-pink;
+}
+
+.accent-color-2 {
+    background: lighten($american-pink, 10%);
+}
+
+.accent-color-2-brighter {
+    background: lighten($american-pink, 15%);
+}
+
+.accent-color-2-brightest {
+    background: lighten($american-pink, 20%);
+}
+
+.button-color-2 {
+    background: lighten($american-pink, 10%);
+}
+
+.button-color-2:hover {
+    background: lighten($american-pink, 15%);
+}
+
+// #############################################################################
+
+.base-color-3 {
+    background: $old-car-yellow;
+}
+
+.accent-color-3 {
+    background: lighten($old-car-yellow, 10%);
+}
+
+.accent-color-3-brighter {
+    background: lighten($old-car-yellow, 15%);
+}
+
+.accent-color-3-brightest {
+    background: lighten($old-car-yellow, 20%);
+}
+
+.button-color-3 {
+    background: lighten($old-car-yellow, 10%);
+}
+
+.button-color-3:hover {
+    background: lighten($old-car-yellow, 15%);
+}
+
+// #############################################################################
+
+.base-color-3 {
+    background: $old-car-yellow;
+}
+
+.accent-color-3 {
+    background: lighten($old-car-yellow, 10%);
+}
+
+.accent-color-3-brighter {
+    background: lighten($old-car-yellow, 15%);
+}
+
+.accent-color-3-brightest {
+    background: lighten($old-car-yellow, 20%);
+}
+
+.button-color-3 {
+    background: lighten($old-car-yellow, 10%);
+}
+
+.button-color-3:hover {
+    background: lighten($old-car-yellow, 15%);
+}
+
+// #############################################################################
+
+.base-color-4 {
+    background: $rain;
+}
+
+.accent-color-4 {
+    background: lighten($rain, 10%);
+}
+
+.accent-color-4-brighter {
+    background: lighten($rain, 15%);
+}
+
+.accent-color-4-brightest {
+    background: lighten($rain, 20%);
+}
+
+.button-color-4 {
+    background: lighten($rain, 10%);
+}
+
+.button-color-4:hover {
+    background: lighten($rain, 15%);
+}
+
+// #############################################################################
+
+.base-color-5 {
+    background: $grass;
+}
+
+.accent-color-5 {
+    background: lighten($grass, 10%);
+}
+
+.accent-color-5-brighter {
+    background: lighten($grass, 15%);
+}
+
+.accent-color-5-brightest {
+    background: lighten($grass, 20%);
+}
+
+.button-color-5 {
+    background: lighten($grass, 10%);
+}
+
+.button-color-5:hover {
+    background: lighten($grass, 15%);
+}
+
+// #############################################################################
+
+.base-color-6 {
+    background: $gun-metal;
+}
+
+.accent-color-6 {
+    background: lighten($gun-metal, 10%);
+}
+
+.accent-color-6-brighter {
+    background: lighten($gun-metal, 15%);
+}
+
+.accent-color-6-brightest {
+    background: lighten($gun-metal, 20%);
+}
+
+.button-color-6 {
+    background: lighten($gun-metal, 10%);
+}
+
+.button-color-6:hover {
+    background: lighten($gun-metal, 15%);
 }

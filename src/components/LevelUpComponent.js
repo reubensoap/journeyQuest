@@ -12,6 +12,97 @@ class LevelUp extends React.Component {
 
     }
 
+    componentDidMount() {
+        const menuColor = localStorage.getItem("menuColor");
+
+        if(menuColor === 'undefined' || menuColor === "1"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-1');
+            document.getElementById("footer").classList.add('accent-color-1');
+
+            const taskIcons = document.querySelectorAll('.task-icon');
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-1-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button');
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-1');
+            }
+
+         } else if (menuColor === "2"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-2');
+            document.getElementById("footer").classList.add('accent-color-2');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-2-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-2');
+            }
+
+         } else if (menuColor === "3"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-3');
+            document.getElementById("footer").classList.add('accent-color-3');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-3-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-3');
+            }
+
+         } else if (menuColor === "4"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-4');
+            document.getElementById("footer").classList.add('accent-color-4');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-4-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-4');
+            }
+
+         } else if (menuColor === "5"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-5');
+            document.getElementById("footer").classList.add('accent-color-5');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-5-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-5');
+            }
+
+         } else if (menuColor === "6"){
+            document.getElementById("dash-wrapper-1").classList.add('base-color-6');
+            document.getElementById("footer").classList.add('accent-color-6');
+
+            const taskIcons = document.querySelectorAll('.task-icon')
+            for (var i = 0; i < taskIcons.length; i++){
+                taskIcons[i].classList.add('accent-color-6-brightest');
+            }
+
+            const buttons = document.querySelectorAll('.button')
+            for (var i = 0; i < buttons.length; i++){
+                buttons[i].classList.add('button-color-6');
+            }
+
+         }
+    }
+
+
 
     render(){
 
@@ -19,7 +110,7 @@ class LevelUp extends React.Component {
 
             <div>
                 <div className="content-container">
-                    <div className="flex-it flex-center-align dash-wrapper">
+                    <div id="dash-wrapper-1" className="flex-it flex-center-align dash-wrapper">
                         <div className="taskData__Level color-light">
                             <h2>Level Up</h2>
                             <div className="levelUpWrapper">
@@ -28,14 +119,14 @@ class LevelUp extends React.Component {
                             </div>
                         </div>
                         <div className="actionSection">
-                            <div className="newStuff__wrapper">
-                                <h3>Plates</h3>
+                            <div id="plateWrapper" className="newStuff__wrapper">
+                                <h3 className="color-light">Plates</h3>
                                 <div className="newStuff__plate__wrapper">
                                     <div className="newPlate">
                                         
                                     </div>
                                 </div>
-                                <h3>Menu Color</h3>
+                                <h3 className="color-light">Menu Color</h3>
                                 <div className="newStuff__color__wrapper">
                                     <div className="newColor">
                                         
@@ -43,10 +134,10 @@ class LevelUp extends React.Component {
                                 </div>
                             </div>
                             <Link to={`/congrats/${this.props.match.params.name}/${this.props.match.params.level}`}>
-                                <button className="button__primary">Continue</button>
+                                <button className="button button__primary">Continue</button>
                             </Link>
                         </div>
-                        <div className="flex-it footer-tasks">
+                        <div id="footer" className="flex-it footer-tasks">
                             <div className="flex-it footer-content">
                                 <Link to="/dashboard">
                                     <div className="flex-it flex-center task-icon">

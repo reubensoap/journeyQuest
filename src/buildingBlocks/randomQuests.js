@@ -298,5 +298,65 @@ export const randomQ = {
         questName: "Watch a movie with subtitles",
         questDesc: "I can finally understand them!",
         questLevel: 0
+    },
+    51: {
+        category: "adventure",
+        questName: "Swim at a place you've never been",
+        questDesc: "I like this watering hole",
+        questLevel: 1
+    },
+    52: {
+        category: "adventure",
+        questName: "Take a vacation",
+        questDesc: "3 days or longer",
+        questLevel: 2
+    },
+    53: {
+        category: "adventure",
+        questName: "Drive Route 66",
+        questDesc: "Side note: It's really long",
+        questLevel: 2
+    },
+    54: {
+        category: "adventure",
+        questName: "Eat Cactus",
+        questDesc: "This is food?",
+        questLevel: 0
+    },
+    55: {
+        category: "skill",
+        questName: "Learn a recipe of a different culture",
+        questDesc: "Anti-pasta!",
+        questLevel: 1
+    },
+    56: {
+        category: "adventure",
+        questName: "Order something you dont need on Amazon",
+        questDesc: "Treat yo self",
+        questLevel: 0
+    },
+    57: {
+        category: "health",
+        questName: "Buy a new pet",
+        questDesc: "Your name shall be Biscuit",
+        questLevel: 2
+    },
+    58: {
+        category: "adventure",
+        questName: "Go to a different clothing store",
+        questDesc: "This sweater is me",
+        questLevel: 0
+    },
+    59: {
+        category: "adventure",
+        questName: "Stay up till 4:00 am",
+        questDesc: "You can do this!",
+        questLevel: 1
+    },
+    60: {
+        category: "adventure",
+        questName: "Get a new piercing",
+        questDesc: "Can be anywhere you like",
+        questLevel: 1
     }
 }

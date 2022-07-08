@@ -1,59 +1,87 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import TaskList from './TaskListComponent';
-import { levels } from '../buildingBlocks/levels';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { completeQuest } from '../actions/quests';
+import { completeQuest, addPoints, levelUp } from '../actions/quests';
+import { levels, questLevels } from '../buildingBlocks/levels';
+import { history } from '../routers/AppRouter';
 import Footer from './FooterComponent';
-import { headerStatements } from '../buildingBlocks/statements';
-import { faCoffee, faAnglesRight, faCarrot, faChessKnight, faAward, faInfo, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPlus, faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
-class Dashboard extends React.Component {
+class Customize extends React.Component {
 
     constructor(props){
         super(props);
 
-
-    }
-
-    setTheme = (theme) => {
-        document.documentElement.className = theme;
-
-        console.log(document.documentElement.className);
-
-        if(document.documentElement.className === 'watermelon'){
-            localStorage.setItem("menuColor", 1);
-        } else if(document.documentElement.className === 'violet-blue'){
-            localStorage.setItem("menuColor", 2);
-        } else if(document.documentElement.className === 'old-car-yellow'){
-            localStorage.setItem("menuColor", 3);
-        } else if(document.documentElement.className === 'rain'){
-            localStorage.setItem("menuColor", 4);
-        } else if(document.documentElement.className === 'grass'){
-            localStorage.setItem("menuColor", 5);
-        } else if(document.documentElement.className === 'gun-metal'){
-            localStorage.setItem("menuColor", 6);
+        this.state = {
+            plateNum: 6,
+            menuNum: 6
         }
+
     }
+
+
+    renderLook = () => {
+        return(
+            <div className="lookup">
+                <div className={`top ${
+                    (this.state.plateNum === 1 ? 'background-level-1' : '') ||
+                    (this.state.plateNum === 2 ? 'background-level-2' : '') ||
+                    (this.state.plateNum === 3 ? 'background-level-3' : '') ||
+                    (this.state.plateNum === 4 ? 'background-level-4' : '') ||
+                    (this.state.plateNum === 5 ? 'background-level-5' : '') ||
+                    (this.state.plateNum === 6 ? 'background-level-6' : '')
+                }`}>
+
+                </div>
+                <div className={`bottom ${
+                    (this.state.menuNum === 1 ? 'base-color-1' : '') ||
+                    (this.state.menuNum === 2 ? 'base-color-2' : '') ||
+                    (this.state.menuNum === 3 ? 'base-color-3' : '') ||
+                    (this.state.menuNum === 4 ? 'base-color-4' : '') ||
+                    (this.state.menuNum === 5 ? 'base-color-5' : '') ||
+                    (this.state.menuNum === 6 ? 'base-color-6' : '')
+                }`}>
+
+                </div>
+            </div>
+        )
+    }
+
+
+
+    renderActionSection = () => {
+
+        return(
+            <div className="additionSection">
+                <div className="additionTop color-light">
+                    <h3>Plates</h3>
+                </div>
+                <div className="additionBottom">
+                    
+                </div>
+                <div className="additionTop color-light">
+                    <h3>Menu Colors</h3>
+                </div>
+                <div className="additionBottom">
+                    
+                </div>
+            </div>
+        );
+        
+    }
+
+    changeMenu = () =>  {
+
+    }
+
+    changePlate = () => {
+
+    }
+
 
     componentDidMount() {
         const menuColor = localStorage.getItem("menuColor");
-        const userPlate = localStorage.getItem("plate");
-
-        if(userPlate === 'undefined' || userPlate === "1"){
-            document.getElementById("plate-insert").classList.add('background-level-1');
-        } else if(userPlate === "2"){
-            document.getElementById("plate-insert").classList.add('background-level-2');
-        } else if(userPlate === "3"){
-            document.getElementById("plate-insert").classList.add('background-level-3');
-        } else if(userPlate === "4"){
-            document.getElementById("plate-insert").classList.add('background-level-4');
-        } else if(userPlate === "5"){
-            document.getElementById("plate-insert").classList.add('background-level-5');
-        } else if(userPlate === "6"){
-            document.getElementById("plate-insert").classList.add('background-level-6');
-        }
 
         if(menuColor === 'undefined' || menuColor === "1"){
             document.getElementById("dash-wrapper-1").classList.add('base-color-1');
@@ -172,43 +200,30 @@ class Dashboard extends React.Component {
          }
     }
 
-    renderPlateOpions = () => {
-        
-    }
 
-    render(){
-
-
+    render() {
         return (
             <div className="content-container">
-                <div id="plate-insert" className="dash-header">
-                    <div className="dash-header__top">
-                        <h2 className="dash-name">Welcome, {this.props.userDetails.firstName}</h2>
-                        <p>{headerStatements[Math.floor(Math.random() * 20)+1].statement}</p>
+                <div id="dash-wrapper-1" className="flex-it flex-center-align dash-wrapper">
+                    <div className="taskData color-light">
+                        <h3>Customize</h3>
+                        <p>What fits you?</p>
                     </div>
-                    <div className="flex-it flex-just-space dash-header__bottom">
-                        <div className="flex-it flex-center left">
-                            <p>Lv. {this.props.userDetails.level}</p>
-                            <p>Next {levels[this.props.userDetails.level].levelCap - this.props.userDetails.points} pts</p>
-                            <p>{levels[this.props.userDetails.level].rank}</p>
-                        </div>
-                        <div className="right">
-                            <Link to="/facts">
-                                <div className="flex-it flex-center task-icon">
-                                    <FontAwesomeIcon icon={faInfo} size="1x"/>
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div id="dash-wrapper-1" className="flex-it dash-wrapper dash-color-1">
-                    <TaskList />
-                    <Footer option1="settings" option2="addition" image1={faInfo} image2={faPlus}/>
+                    {this.renderLook()}
+                    {this.renderActionSection()}
+                    <Footer option1="dashboard" option2="addition" image1={faArrowLeft} image2={faPlus}/>
+                    
                 </div>
             </div>
         );
     };
 };
+
+const mapDispatchToProps = (dispatch) => ({
+    completeQuest: (id) => dispatch(completeQuest(id)),
+    addPoints: (data, data2) => dispatch(addPoints(data, data2)),
+    levelUp: (data) => dispatch(levelUp(data))
+});
 
 const mapStateToProps = (state, props) => {
     return {
@@ -217,5 +232,4 @@ const mapStateToProps = (state, props) => {
 };
 
 
-
-export default connect(mapStateToProps)(Dashboard);
+export default connect(mapStateToProps,mapDispatchToProps)(Customize);

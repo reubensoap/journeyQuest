@@ -9,6 +9,7 @@ import LevelUp from '../components/LevelUpComponent';
 import NavigationComponent from '../components/NavigationComponent';
 import AddQuest from '../components/AddQuestComponent';
 import RandomQuest from '../components/RandomQuestComponent';
+import Customize from '../components/CustomizeComponent';
 
 export const history = createHistory();
 
@@ -25,6 +26,7 @@ const AppRouter = () => (
                 <Route path="/task/:id" component={Task}></Route>
                 <Route path="/levelUp/:name/:level" component={LevelUp}></Route>
                 <Route path="/congrats/:name/:level" component={Congrats}></Route>
+                <Route path="/customize" component={Customize}></Route>
                 <Route path="/newQuest" component={AddQuest}></Route>
             </Switch>
         </div>

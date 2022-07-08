@@ -1,3 +1,8 @@
+.additionWrapper {
+    max-width: 500px;
+    padding: 0 1rem;
+}
+
 .additionSection {
     margin-bottom: 10rem;
     padding: 0 1.5rem 3rem 1.5rem;
@@ -14,6 +19,10 @@
     text-align: left;
     border-bottom: 1px solid white;
     padding-bottom: 3rem;
+
+    h3 {
+        padding-bottom: 1rem;
+    }
 }
 
 .additionBottom {
@@ -25,11 +34,15 @@
     }
 }
 
+.additionBottom .additionQualities {
+    p {
+        padding-bottom: 1rem;
+    }
+}
+
 .option {
-    background: lighten($watermelon, 10%);
     padding: 1rem;
     border-radius: 5px;
-    
 }
 
 form {
@@ -51,7 +64,6 @@ form {
 
     .form__button {
         width: 100%;
-        background: lighten($watermelon, 15%);
         padding: 1rem;
     }
 }
